@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="area-login">
+        <div class="login">
+            <div><img src="#" alt=""></div>
+            <form method="post">
+                <input type="email" name="email" id="txtEmail" placeholder="Email do Usuario">
+                <input type="password" name="senha" placeholder="Sua Senha" id="txtSenha">
+                <input type="submit" value="Entrar">
+            </form>
+            <p>Ainda não tem uma conta? <a href="#" onclick="cadastrarUsuario()">Criar conta</a></p>
+            <div id="cadastroDeUsuarios" class="criarConta escondido">
+                <input type="text" name="nome" id="txtNome" placeholder="Seu nome">
+                <input type="text" name="email" id="txtEmailCadastro" placeholder="Seu Email">
+                <input type="password" name="senha" id="txtSenhaCadastro" placeholder="Escolha uma senha">
+                <input type="submit" value="Cadastrar">
+
+            </div>
+        </div>
+
+    </section>
+</body>
+<script>
+    document.addEventListener('submit', events => {
+        events.preventDefault()
+    })
+    function cadastrarUsuario() {
+        const formCadastro = document.querySelector("#cadastroDeUsuarios");
+        formCadastro.classList.remove("escondido")
+    }
+</script>
+
+</html>
