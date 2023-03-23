@@ -6,7 +6,7 @@ function DadosUsuarios(email, senha){
 
 function cadastrarUsuario() {
     const formCadastro = document.querySelector("#cadastroDeUsuarios");
-    const formLogin = document.querySelector(".formLogin")
+    const formLogin = document.querySelector("#login-user")
     formCadastro.classList.remove("escondido")
     formLogin.classList.add("escondido")
 }
