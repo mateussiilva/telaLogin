@@ -4,9 +4,7 @@ function DadosUsuarios(email, senha){
     this.senha = senha;
 }
 
-function cadastrarUsuario() {
-    const formCadastro = document.querySelector("#cadastroDeUsuarios");
-    const formLogin = document.querySelector("#login-user")
+function cadastrarUsuario(formCadastro,formLogin) {
     formCadastro.classList.remove("escondido")
     formLogin.classList.add("escondido")
 }
@@ -14,7 +12,9 @@ function cadastrarUsuario() {
 
 document.addEventListener('submit', events => {
     events.preventDefault()
-    let dado = getDadosUsuarios()
+    const formCadastro = document.querySelector("#cadastroDeUsuarios");
+    const formLogin = document.querySelector("#login-user")
+    let dado = getDadosUsuarios(formCadastro,formLogin)
     console.log(dado)
 })
 
